@@ -860,155 +860,386 @@ textarea {
   will-change: transform, opacity;
 }
 
+/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
+
+/* Планшеты и большие телефоны (до 1100px) */
 @media (max-width: 1100px) {
   .hero__grid,
-  .date__grid,{
+  .date__grid {
     grid-template-columns: 1fr;
-  }
-
-  .details__grid {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
   }
 
   .hero__visual {
-    max-width: 760px;
+    max-width: 600px;
     margin: 0 auto;
   }
 
+  .hero__image-wrap {
+    height: 560px;
+    max-width: 100%;
+  }
+
   .intro__inner {
-    grid-template-columns: 180px minmax(320px, 1fr) 180px;
-    gap: 24px;
-    min-height: 560px;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .intro__center {
+    grid-column: span 2;
+    order: -1;
   }
 
-  .intro__photo {
-    width: 180px;
+  .timeline-card {
+    padding: 24px;
   }
-
-  .intro__photo--left {
-    height: 280px;
-  }
-
-  .intro__photo--right {
-    height: 330px;
+  
+  .timeline-card__time {
+    font-size: 38px;
   }
 }
 
+/* Телефоны (до 900px) */
 @media (max-width: 900px) {
+  /* Шапка */
   .header {
-    top: 12px;
+    top: 8px;
   }
-
+  
   .header__inner {
-    padding: 14px 18px;
-    border-radius: 22px;
+    padding: 10px 16px;
   }
-
+  
+  .logo {
+    font-size: 28px;
+  }
+  
   .nav {
     display: none;
   }
-
+  
   .burger {
     display: block;
   }
-
-  .intro__inner {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    min-height: auto;
-  }
-
-  .intro__side {
-    order: 2;
-  }
-
-  .intro__center {
-    order: 1;
-  }
-
-  .intro__photo {
-    width: 240px;
-    height: 320px;
-    transform: none;
-    border-radius: 26px;
-  }
-
-  .details__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .timeline-card {
-    grid-template-columns: 100px 18px 1fr;
-    gap: 18px;
-  }
-}
-
-@media (max-width: 640px) {
-  .section {
-    padding: 88px 0;
-  }
-
+  
+  /* Герой */
   .hero {
-    padding-top: 136px;
+    min-height: auto;
+    padding: 120px 0 60px;
   }
-
-  .hero__subtitle,
-  .date__lead {
-    font-size: 16px;
+  
+  .hero__title {
+    font-size: clamp(48px, 12vw, 72px);
+    text-align: center;
   }
-
-  .float-card--left {
-    left: -16px;
+  
+  .hero__subtitle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
-
+  
+  .hero__actions {
+    justify-content: center;
+  }
+  
+  .hero__image-wrap {
+    height: 480px;
+    border-radius: 30px;
+  }
+  
   .hero__date {
-    left: 16px;
-    bottom: 16px;
-    padding: 12px 14px 10px;
-    border-radius: 18px;
+    padding: 10px 16px;
   }
-
+  
   .hero__date span {
-    font-size: 18px;
+    font-size: 24px;
   }
-
+  
+  .float-card--left {
+    left: 0;
+    top: 5%;
+  }
+  
+  /* Intro секция */
+  .intro__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .intro__side {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .intro__photo {
+    width: 200px;
+    height: 260px;
+  }
+  
+  .intro__photo--left,
+  .intro__photo--right {
+    transform: none;
+  }
+  
+  .intro__center {
+    order: 0;
+  }
+  
+  /* Календарь */
   .calendar {
     padding: 20px;
   }
-
+  
   .calendar__head {
     font-size: 32px;
+    text-align: center;
   }
-
+  
   .calendar__days span {
-    height: 42px;
-    border-radius: 12px;
+    height: 40px;
     font-size: 14px;
   }
-
-  .timeline-card {
-    grid-template-columns: 1fr;
+  
+  /* Тайминг */
+  .timeline__list {
+    gap: 16px;
   }
-
+  
+  .timeline-card {
+    grid-template-columns: 80px 1fr;
+    gap: 15px;
+    padding: 20px;
+  }
+  
   .timeline-card__dot {
     display: none;
   }
-
+  
+  .timeline-card__time {
+    font-size: 32px;
+    text-align: right;
+  }
+  
   .timeline-card__body h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  /* Детали */
+  .details__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .detail-card {
+    padding: 20px;
+  }
+  
+  .detail-card h3 {
     font-size: 28px;
+    margin-bottom: 12px;
   }
-
+  
+  .detail-card p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  
+  .detail-card__button {
+    margin-top: 16px;
+    width: 100%;
+  }
+  
+  .detail-card__button .btn {
+    width: 100%;
+  }
+  
+  /* Дресс-код */
+  .palette {
+    gap: 15px;
+  }
+  
+  .palette__item {
+    width: 90px;
+    height: 90px;
+  }
+  
+  /* Форма */
   .rsvp-form {
-    padding: 22px;
+    padding: 24px;
   }
-
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 14px 16px;
+  }
+  
+  /* Футер */
   .footer__inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
   }
-
+  
   .footer__names {
     font-size: 28px;
+  }
+}
+
+/* Маленькие телефоны (до 640px) */
+@media (max-width: 640px) {
+  .section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 36px;
+  }
+  
+  .eyebrow {
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+  
+  /* Герой */
+  .hero {
+    padding-top: 100px;
+  }
+  
+  .hero__image-wrap {
+    height: 380px;
+  }
+  
+  .hero__date {
+    left: 12px;
+    bottom: 12px;
+    padding: 8px 12px;
+  }
+  
+  .hero__date span {
+    font-size: 18px;
+  }
+  
+  /* Счетчик */
+  .countdown__grid {
+    gap: 12px;
+  }
+  
+  .countdown__item {
+    padding: 16px 20px;
+    min-width: 70px;
+  }
+  
+  .countdown__item span {
+    font-size: 42px;
+  }
+  
+  .countdown__item p {
+    font-size: 12px;
+  }
+  
+  /* Детали */
+  .details__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Календарь */
+  .calendar__days {
+    gap: 5px;
+  }
+  
+  .calendar__days span {
+    height: 35px;
+    font-size: 13px;
+  }
+  
+  /* Тайминг */
+  .timeline-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .timeline-card__time {
+    text-align: center;
+    font-size: 28px;
+  }
+  
+  .timeline-card__body h3 {
+    font-size: 22px;
+  }
+  
+  /* Дресс-код */
+  .palette__item {
+    width: 70px;
+    height: 70px;
+    border-width: 4px;
+  }
+  
+  /* Кнопки */
+  .btn {
+    min-height: 48px;
+    padding: 0 24px;
+    font-size: 15px;
+  }
+  
+  .btn--small {
+    min-height: 42px;
+    padding: 0 18px;
+  }
+  
+  /* Футер */
+  .footer {
+    padding: 20px 0 30px;
+  }
+  
+  .footer__names {
+    font-size: 24px;
+  }
+  
+  .footer__date {
+    font-size: 14px;
+  }
+}
+
+/* Очень маленькие телефоны (до 400px) */
+@media (max-width: 400px) {
+  .hero__title {
+    font-size: 42px;
+  }
+  
+  .hero__image-wrap {
+    height: 320px;
+  }
+  
+  .countdown__item {
+    padding: 12px 16px;
+  }
+  
+  .countdown__item span {
+    font-size: 32px;
+  }
+  
+  .calendar__head {
+    font-size: 28px;
+  }
+  
+  .calendar__days span {
+    height: 30px;
+    font-size: 12px;
+  }
+  
+  .palette__item {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .detail-card h3 {
+    font-size: 24px;
   }
 }
 
