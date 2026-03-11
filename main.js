@@ -540,29 +540,47 @@ const musicBtn = document.getElementById('musicToggle');
 let isPlaying = false;
 
 // Музыкальная кнопка
-const music = document.getElementById('bgMusic');
-const musicBtn = document.getElementById('musicToggle');
-const musicText = document.getElementById('musicText');
-let isPlaying = false;
+// Музыкальная кнопка
+document.addEventListener('DOMContentLoaded', function() {
+  const musicBtn = document.getElementById('musicBtn');
+  const bgMusic = document.getElementById('bgMusic');
+  
+  if (!musicBtn || !bgMusic) {
+    console.log('Музыкальные элементы не найдены');
+    return;
+  }
 
-if (musicBtn && music) {
-  musicBtn.addEventListener('click', () => {
+  let isPlaying = false;
+
+  musicBtn.addEventListener('click', function() {
     if (isPlaying) {
-      music.pause();
+      bgMusic.pause();
       musicBtn.classList.remove('playing');
-      musicText.textContent = 'Включить атмосферу';
+      musicBtn.querySelector('.music-text').textContent = 'Включить атмосферу';
     } else {
-      music.play();
-      musicBtn.classList.add('playing');
-      musicText.textContent = 'Выключить атмосферу';
+      // Пробуем воспроизвести
+      let playPromise = bgMusic.play();
+      
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          // Успешно играет
+          musicBtn.classList.add('playing');
+          musicBtn.querySelector('.music-text').textContent = 'Выключить атмосферу';
+          isPlaying = true;
+        }).catch(error => {
+          // Ошибка воспроизведения
+          console.log('Ошибка воспроизведения:', error);
+          alert('Не удалось воспроизвести музыку. Возможно, файл не найден.');
+        });
+      }
     }
     isPlaying = !isPlaying;
   });
 
-  // Автоматически останавливаем, если музыка доиграла
-  music.addEventListener('ended', () => {
+  // Когда музыка закончилась
+  bgMusic.addEventListener('ended', function() {
     isPlaying = false;
     musicBtn.classList.remove('playing');
-    musicText.textContent = 'Включить атмосферу';
+    musicBtn.querySelector('.music-text').textContent = 'Включить атмосферу';
   });
-}
+});
