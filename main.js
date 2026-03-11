@@ -380,7 +380,7 @@ if (form) {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          chat_id: TELEGRAM_CHAT_ID,
+          chat_id: 815325116,
           text: message,
           parse_mode: "HTML"
         })
