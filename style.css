@@ -1216,6 +1216,14 @@ textarea {
   .hero__image {
   object-position: center 10% !important; /* Сдвигает фокус вниз на 30% от верха */
   }
+
+    .music-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    bottom: 16px;
+    right: 16px;
+  }
+  
 }
 
 /* Очень маленькие телефоны (до 400px) */
@@ -1304,25 +1312,40 @@ textarea {
   perspective: 1000px;
 }
 
+/* Музыкальная кнопка */
 .music-button {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
+  padding: 16px 28px;
   background: var(--accent);
   color: white;
   border: none;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  border-radius: 999px; /* Скруглённые как у других кнопок */
+  box-shadow: 0 8px 24px rgba(141, 63, 80, 0.3);
   cursor: pointer;
   z-index: 100;
-  font-size: 24px;
+  font-family: "Leotaro", serif;
+  font-size: 18px;
+  letter-spacing: 0.02em;
   transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(5px);
+}
+
+.music-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(141, 63, 80, 0.4);
+  background: #9e4a5c;
 }
 
 .music-button.playing {
-  animation: pulse 2s infinite;
+  background: #4a6b5c; /* Зеленоватый оттенок когда играет */
+  box-shadow: 0 0 20px rgba(74, 107, 92, 0.5);
+}
+
+.music-text {
+  transition: opacity 0.3s;
 }
 
 @keyframes pulse {
