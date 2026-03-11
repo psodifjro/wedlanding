@@ -539,15 +539,30 @@ const music = document.getElementById('bgMusic');
 const musicBtn = document.getElementById('musicToggle');
 let isPlaying = false;
 
-musicBtn.addEventListener('click', () => {
-  if (isPlaying) {
-    music.pause();
+// Музыкальная кнопка
+const music = document.getElementById('bgMusic');
+const musicBtn = document.getElementById('musicToggle');
+const musicText = document.getElementById('musicText');
+let isPlaying = false;
+
+if (musicBtn && music) {
+  musicBtn.addEventListener('click', () => {
+    if (isPlaying) {
+      music.pause();
+      musicBtn.classList.remove('playing');
+      musicText.textContent = 'Включить атмосферу';
+    } else {
+      music.play();
+      musicBtn.classList.add('playing');
+      musicText.textContent = 'Выключить атмосферу';
+    }
+    isPlaying = !isPlaying;
+  });
+
+  // Автоматически останавливаем, если музыка доиграла
+  music.addEventListener('ended', () => {
+    isPlaying = false;
     musicBtn.classList.remove('playing');
-    musicBtn.innerHTML = '🎵';
-  } else {
-    music.play();
-    musicBtn.classList.add('playing');
-    musicBtn.innerHTML = '🎶';
-  }
-  isPlaying = !isPlaying;
-});
+    musicText.textContent = 'Включить атмосферу';
+  });
+}
