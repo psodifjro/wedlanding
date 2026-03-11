@@ -535,10 +535,6 @@ document.querySelectorAll(".intro__photo, .hero__image").forEach((photo) => {
   });
 });
 
-const music = document.getElementById('bgMusic');
-const musicBtn = document.getElementById('musicToggle');
-let isPlaying = false;
-
 // Музыкальная кнопка
 // Музыкальная кнопка
 document.addEventListener('DOMContentLoaded', function() {
