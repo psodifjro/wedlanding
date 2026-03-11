@@ -1005,34 +1005,6 @@ textarea {
   }
 }
 
-.petals {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 40;
-}
-
-.petal {
-  position: absolute;
-  top: -60px;
-  width: 18px;
-  height: 26px;
-  opacity: 0.75;
-  border-radius: 70% 30% 70% 30%;
-  background: linear-gradient(180deg, #f4d7db 0%, #d7a2ab 100%);
-  box-shadow: 0 4px 10px rgba(141, 63, 80, 0.12);
-  will-change: transform;
-}
-
-.petal--soft {
-  background: linear-gradient(180deg, #f6e7e3 0%, #e7c8c8 100%);
-}
-
-.petal--dark {
-  background: linear-gradient(180deg, #d9a3ad 0%, #b97985 100%);
-}
-
 .reveal-title {
   overflow: hidden;
 }
