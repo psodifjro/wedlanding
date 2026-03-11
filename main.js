@@ -374,7 +374,7 @@ if (form) {
 
     try {
       // Отправляем в Telegram
-      const response = await fetch(`https://api.telegram.org/bot${7686705887:AAEihFWKhnYeDHVIm1NbPwnxecmLIPgDLSs}/sendMessage`, {
+      const response = await fetch(`https://api.telegram.org/bot7686705887:AAEihFWKhnYeDHVIm1NbPwnxecmLIPgDLSs/sendMessage`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
