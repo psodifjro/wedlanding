@@ -1056,3 +1056,30 @@ textarea {
 .intro__side {
   perspective: 1000px;
 }
+
+.music-button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  border: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 100;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.music-button.playing {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(141, 63, 80, 0.7); }
+  70% { box-shadow: 0 0 0 12px rgba(141, 63, 80, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(141, 63, 80, 0); }
+}
