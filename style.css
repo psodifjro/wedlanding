@@ -897,6 +897,10 @@ textarea {
   .timeline-card__time {
     font-size: 38px;
   }
+
+  .hero__image {
+  object-position: center 30%; /* Сдвигает фокус вниз на 30% от верха */
+  }
 }
 
 /* Телефоны (до 900px) */
@@ -1089,6 +1093,10 @@ textarea {
   .footer__names {
     font-size: 28px;
   }
+
+  .hero__image {
+  object-position: center 30%; /* Сдвигает фокус вниз на 30% от верха */
+  }
 }
 
 /* Маленькие телефоны (до 640px) */
@@ -1204,6 +1212,10 @@ textarea {
   .footer__date {
     font-size: 14px;
   }
+  
+  .hero__image {
+  object-position: center 30%; /* Сдвигает фокус вниз на 30% от верха */
+  }
 }
 
 /* Очень маленькие телефоны (до 400px) */
@@ -1240,6 +1252,10 @@ textarea {
   
   .detail-card h3 {
     font-size: 24px;
+  }
+
+  .hero__image {
+  object-position: center 30%; /* Сдвигает фокус вниз на 30% от верха */
   }
 }
 
