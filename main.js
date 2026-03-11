@@ -334,48 +334,69 @@ document.querySelectorAll(".magnetic").forEach((button) => {
 });
 
 // RSVP
+// RSVP - отправка в Telegram
 const form = document.getElementById("rsvp-form");
 const formStatus = document.getElementById("form-status");
+
+// ⚠️ ВАЖНО: Замените эти значения на свои!
+const TELEGRAM_BOT_TOKEN = "7686705887:AAEihFWKhnYeDHVIm1NbPwnxecmLIPgDLSs"; // Сюда ваш токен
+const TELEGRAM_CHAT_ID = "815325116";      // Сюда ваш Chat ID
 
 if (form) {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const payload = {
-      fullname: document.getElementById("fullname").value.trim(),
-      attendance: document.getElementById("attendance").value.trim(),
-      companions: document.getElementById("companions").value.trim(),
-      children: document.getElementById("children").value.trim(),
-      alcohol: document.getElementById("alcohol").value.trim(),
-    };
+    // Собираем данные
+    const fullname = document.getElementById("fullname").value.trim();
+    const attendance = document.getElementById("attendance").value.trim();
+    const companions = document.getElementById("companions").value.trim();
+    const children = document.getElementById("children").value.trim();
+    const alcohol = document.getElementById("alcohol").value.trim();
 
-    if (!payload.fullname || !payload.attendance) {
+    // Проверка обязательных полей
+    if (!fullname || !attendance) {
       formStatus.textContent = "Пожалуйста, заполните обязательные поля.";
       return;
     }
 
+    // Формируем красивое сообщение
+    const message = `
+🎉 <b>Новая анкета с сайта!</b>
+
+👤 <b>ФИО:</b> ${fullname}
+✅ <b>Присутствие:</b> ${attendance}
+👥 <b>Пара:</b> ${companions || "не указано"}
+👶 <b>Дети:</b> ${children || "не указано"}
+🍷 <b>Алкоголь:</b> ${alcohol || "не указано"}
+    `;
+
     formStatus.textContent = "Отправляем анкету...";
 
     try {
-      const response = await fetch("/api/send-rsvp", {
+      // Отправляем в Telegram
+      const response = await fetch(`https://api.telegram.org/bot${7686705887:AAEihFWKhnYeDHVIm1NbPwnxecmLIPgDLSs}/sendMessage`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(payload)
+        body: JSON.stringify({
+          chat_id: TELEGRAM_CHAT_ID,
+          text: message,
+          parse_mode: "HTML"
+        })
       });
 
       const result = await response.json();
 
-      if (!response.ok || !result.ok) {
-        throw new Error(result.message || "Ошибка отправки");
+      if (!result.ok) {
+        throw new Error(result.description || "Ошибка отправки");
       }
 
       formStatus.textContent = "Спасибо! Анкета успешно отправлена.";
-      form.reset();
+      form.reset(); // Очищаем форму
     } catch (error) {
       formStatus.textContent = "Не удалось отправить анкету. Попробуйте позже.";
-      console.error(error);
+      console.error("Ошибка:", error);
     }
   });
 }
