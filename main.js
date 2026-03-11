@@ -534,3 +534,20 @@ document.querySelectorAll(".intro__photo, .hero__image").forEach((photo) => {
     });
   });
 });
+
+const music = document.getElementById('bgMusic');
+const musicBtn = document.getElementById('musicToggle');
+let isPlaying = false;
+
+musicBtn.addEventListener('click', () => {
+  if (isPlaying) {
+    music.pause();
+    musicBtn.classList.remove('playing');
+    musicBtn.innerHTML = '🎵';
+  } else {
+    music.play();
+    musicBtn.classList.add('playing');
+    musicBtn.innerHTML = '🎶';
+  }
+  isPlaying = !isPlaying;
+});
