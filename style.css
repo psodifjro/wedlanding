@@ -743,6 +743,8 @@ text-transform:uppercase;
   border: 1px solid rgba(69, 33, 42, 0.06);
   box-shadow: var(--shadow-soft);
   backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
 }
 
 .detail-card h3 {
@@ -760,7 +762,9 @@ text-transform:uppercase;
 }
 
 .detail-card__button {
-  margin-top: 24px;
+  margin-top: 20px;       /* Отступ сверху от текста */
+  align-self: center;     /* Выравнивание по центру по горизонтали */
+  width: fit-content;     /* Ширина по содержимому */
 }
 
 .rsvp-form {
