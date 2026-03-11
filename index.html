@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Андрей & Елизавета</title>
+  <meta name="description" content="Свадебное приглашение" />
+
+  <link rel="icon" href="assets/icons/monogram.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/style.css?v=3"/>
+</head>
+<body>
+  <div class="petals" aria-hidden="true"></div>
+  <div class="grain"></div>
+  <div class="bg-blur bg-blur--1"></div>
+  <div class="bg-blur bg-blur--2"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="#hero" class="logo">A & E</a>
+
+        <nav class="nav">
+          <a href="#about">О нас</a>
+          <a href="#date">Дата</a>
+          <a href="#timeline">Тайминг</a>
+          <a href="#dresscode">Дресс-код</a>
+          <a href="#details">Детали</a>
+          <a href="#rsvp">Анкета</a>
+        </nav>
+
+        <button class="burger" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu">
+      <a href="#about">О нас</a>
+      <a href="#date">Дата</a>
+      <a href="#timeline">Тайминг</a>
+      <a href="#dresscode">Дресс-код</a>
+      <a href="#details">Детали</a>
+      <a href="#rsvp">Анкета</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <h1 class="hero__title reveal-title">
+            Андрей <span>&</span> Елизавета
+          </h1>
+
+          <p class="hero__subtitle reveal-up">
+            Приглашаем вас разделить с нами один из самых важных дней нашей жизни 
+            - <b>день нашей свадьбы</b>.
+          </p>
+
+          <div class="hero__actions reveal-up">
+            <a href="#rsvp" class="btn magnetic">Подтвердить присутствие</a>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal-scale">
+          <div class="hero__image-wrap parallax-media">
+            <img src="assets/images/hero-couple.webp" alt="Фото пары" class="hero__image" loading="lazy" />
+
+            <div class="hero__date hero__date--overlay">
+              <span>05 • 06 • 26</span>
+            </div>
+          </div>
+
+          <div class="float-card float-card--left">
+            <span>любовь</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Листать дальше">
+        <span></span>
+      </a>
+    </section>
+
+    <section class="intro section section--tight" id="about">
+      <div class="container intro__inner">
+        <div class="intro__side intro__side--left">
+          <img src="assets/images/photo-1.jpg" alt="Фото 1" class="intro__photo intro__photo--left" loading="lazy" />
+        </div>
+
+        <div class="intro__center">
+          <p class="eyebrow reveal-up">О событии</p>
+          <h2 class="section-title reveal-title">Дорогие друзья и близкие!</h2>
+
+          <p class="intro__text reveal-up">
+            Мы будем счастливы разделить с вами радость неповторимого для нас дня —
+            дня нашей свадьбы. Этот вечер будет наполнен теплом, любовью и самыми
+            важными моментами, которые останутся в памяти навсегда!
+          </p>
+          <p class="intro__text reveal-up">
+            <b>Место проведения</b>: Алексееевская Усадьба, город Великий Новгород
+          </p>
+
+          <a
+            href="https://yandex.com/maps/org/alekseyevskaya_usadba/65215428809/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="map-button magnetic reveal-up"
+          >
+            Посмотреть на карте
+          </a>
+        </div>
+
+        <div class="intro__side intro__side--right">
+          <img src="assets/images/photo-2.webp" alt="Фото 2" class="intro__photo intro__photo--right" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="date section" id="date">
+      <div class="container date__grid">
+        <div class="date__content">
+          <p class="eyebrow reveal-up">Дата</p>
+          <h2 class="section-title reveal-title">Сохраняйте дату</h2>
+          <p class="date__lead reveal-up">
+            Будем ждать вас на нашем празднике!
+          </p>
+        </div>
+
+        <div class="calendar reveal-scale js-float-block">
+          <div class="calendar__head">Июнь 2026</div>
+
+          <div class="calendar__weekdays">
+            <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+          </div>
+
+          <div class="calendar__days">
+            <span>1</span><span>2</span><span>3</span><span>4</span><span class="active">5</span><span>6</span><span>7</span>
+            <span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
+            <span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span>
+            <span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span>
+            <span>29</span><span>30</span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="countdown section">
+  <div class="container">
+    <div class="section-center">
+      <p class="eyebrow">До нашей свадьбы</p>
+      <h2 class="section-title">Осталось совсем немного</h2>
+    </div>
+
+    <div class="countdown__grid">
+      <div class="countdown__item">
+        <span id="days">00</span>
+        <p>дней</p>
+      </div>
+
+      <div class="countdown__item">
+        <span id="hours">00</span>
+        <p>часов</p>
+      </div>
+
+      <div class="countdown__item">
+        <span id="minutes">00</span>
+        <p>минут</p>
+      </div>
+
+      <div class="countdown__item">
+        <span id="seconds">00</span>
+        <p>секунд</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="timeline section" id="timeline">
+      <div class="container">
+        <div class="section-center">
+          <p class="eyebrow reveal-up">Тайминг дня</p>
+          <h2 class="section-title reveal-title">План торжества</h2>
+        </div>
+
+        <div class="timeline__list">
+          <article class="timeline-card reveal-left js-float-block">
+            <div class="timeline-card__time">15:30</div>
+            <div class="timeline-card__dot"></div>
+            <div class="timeline-card__body">
+              <h3>Сбор гостей / фуршет</h3>
+              <p>Тёплые встречи, лёгкие закуски и начало нашего красивого вечера.</p>
+            </div>
+          </article>
+
+          <article class="timeline-card reveal-right js-float-block">
+            <div class="timeline-card__time">16:00</div>
+            <div class="timeline-card__dot"></div>
+            <div class="timeline-card__body">
+              <h3>Торжественная регистрация</h3>
+              <p>Самый трогательный момент дня, который мы будем счастливы разделить с вами.</p>
+            </div>
+          </article>
+
+          <article class="timeline-card reveal-left js-float-block">
+            <div class="timeline-card__time">17:00</div>
+            <div class="timeline-card__dot"></div>
+            <div class="timeline-card__body">
+              <h3>Свадебный банкет</h3>
+              <p>Ужин, поздравления, музыка, танцы и праздничная программа.</p>
+            </div>
+          </article>
+
+          <article class="timeline-card reveal-right js-float-block">
+            <div class="timeline-card__time">23:00</div>
+            <div class="timeline-card__dot"></div>
+            <div class="timeline-card__body">
+              <h3>Окончание вечера</h3>
+              <p>Финал дня и самые тёплые воспоминания.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dresscode section" id="dresscode">
+      <div class="container">
+        <div class="section-center">
+          <p class="eyebrow reveal-up">Дресс-код</p>
+          <h2 class="section-title reveal-up">Будем очень благодарны, если вы поддержите стиль и цветовую гамму нашей свадьбы</h2>
+        </div>
+
+        <div class="palette">
+          <div class="palette__item js-pop-item color-1"></div>
+          <div class="palette__item js-pop-item color-2"></div>
+          <div class="palette__item js-pop-item color-3"></div>
+          <div class="palette__item js-pop-item color-4"></div>
+          <div class="palette__item js-pop-item color-5"></div>
+          <div class="palette__item js-pop-item color-6"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="details section" id="details">
+      <div class="container">
+        <div class="section-center">
+          <p class="eyebrow reveal-up">Детали</p>
+          <h2 class="section-title reveal-up">Немного важной информации</h2>
+        </div>
+
+        <div class="details__grid">
+          <article class="detail-card js-detail-card">
+            <h3>Деталь №1</h3>
+            <p>
+              Мы не хотим обременять вас выбором подарка, поэтому будем очень рады
+              вкладу в бюджет нашей молодой семьи.
+            </p>
+          </article>
+
+          <article class="detail-card js-detail-card">
+            <h3>Деталь №2</h3>
+            <p>
+              Как альтернативу цветам, красотой которых мы не успеем насладиться,
+              мы с радостью примем от вас бутылку вина или другого алкогольного напитка.
+            </p>
+          </article>
+
+          <article class="detail-card js-detail-card">
+            <h3>Деталь №3</h3>
+            <p>
+              По всем вопросам, связанным с торжественным вечером и сюрпризами,
+              просим обращаться к нашему организатору Марии.
+            </p>
+
+            <a
+              href="https://t.me/horvatmaria"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="detail-card__button btn btn--small magnetic"
+            >
+              Написать Марии
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="rsvp section" id="rsvp">
+      <div class="container">
+        <div class="section-center">
+          <p class="eyebrow reveal-up">RSVP</p>
+          <h2 class="section-title reveal-up">Пожалуйста, заполните анкету</h2>
+        </div>
+
+        <form class="rsvp-form reveal-scale" id="rsvp-form" method="POST">
+          <div class="form-group">
+            <label for="fullname">Введите ваше ФИО полностью:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Иванов Иван Иванович" required />
+          </div>
+
+          <div class="form-group">
+            <label for="attendance">Будете ли вы на свадьбе?</label>
+            <select id="attendance" name="attendance" required>
+              <option value="">Выберите вариант</option>
+              <option value="Да, с радостью будем">Да, с радостью буду</option>
+              <option value="К сожалению, не смогу прийти">К сожалению, не смогу прийти</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="companions">Будете ли вы с парой? Если да, то введите ФИО вашей пары.</label>
+            <input type="text" id="companions" name="companions" placeholder="Например: буду с супругой/ Иванова Анна Ивановна" />
+          </div>
+
+          <div class="form-group">
+            <label for="children">Если с вами будут дети, напишите их имена и возраст:</label>
+            <textarea id="children" name="children" rows="4" placeholder="Например: Анна, 6 лет"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="alcohol">Что предпочитаете из алкогольных напитков?</label>
+            <input type="text" id="alcohol" name="alcohol" placeholder="Вино / водка / не пью" />
+          </div>
+
+          <button type="submit" class="btn btn--full magnetic">Отправить</button>
+          <p class="form-status" id="form-status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__names">Андрей & Елизавета</div>
+      <div class="footer__date">05 • 06 • 26</div>
+    </div>
+  </footer>
+
+<script src="assets/js/gsap.min.js?v=3"></script>
+<script src="assets/js/ScrollTrigger.min.js?v=3"></script>
+<script src="assets/js/lenis.min.js?v=3"></script>
+<script src="assets/js/split-type.js?v=3"></script>
+<script src="main.js?v=3"></script>
+</body>
+</html>
