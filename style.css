@@ -899,7 +899,7 @@ textarea {
   }
 
   .hero__image {
-  object-position: center 10%; /* Сдвигает фокус вниз на 30% от верха */
+  object-position: center 10% !important; /* Сдвигает фокус вниз на 30% от верха */
   }
 }
 
@@ -1095,7 +1095,7 @@ textarea {
   }
 
   .hero__image {
-  object-position: center 10%; /* Сдвигает фокус вниз на 30% от верха */
+  object-position: center 10% !important; /* Сдвигает фокус вниз на 30% от верха */
   }
 }
 
@@ -1214,7 +1214,7 @@ textarea {
   }
   
   .hero__image {
-  object-position: center 10%; /* Сдвигает фокус вниз на 30% от верха */
+  object-position: center 10% !important; /* Сдвигает фокус вниз на 30% от верха */
   }
 }
 
@@ -1255,7 +1255,7 @@ textarea {
   }
 
   .hero__image {
-  object-position: center 10%; /* Сдвигает фокус вниз на 30% от верха */
+  object-position: center 10% !important; /* Сдвигает фокус вниз на 30% от верха */
   }
 }
 
